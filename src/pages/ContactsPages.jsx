@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../redux/operations';
 import { selectIsLoading } from '../redux/selectors';
+import ContactForm from 'components/ContactForm/ContactForm';
+import { SearchFilter } from 'components/SearchFilter/SearchFilter';
 
 export const ContactsPages = () => {
   const dispatch = useDispatch();
@@ -16,9 +18,11 @@ export const ContactsPages = () => {
   return (
     <>
       <Helmet>
-        <title>Your contact</title>
+        <title>Your contacts</title>
       </Helmet>
       <div>{isLoading && 'Request in progress ...'}</div>
+      <ContactForm />
+      <SearchFilter />
       <ContactList />
     </>
   );
