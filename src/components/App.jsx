@@ -1,16 +1,21 @@
-export const App = () => {
+import ContactForm from './ContactForm/ContactForm';
+import { ContactList } from './ContactList/ContactList';
+import { Routes, Route } from 'react-router-dom';
+//import { RestrictedRoute } from './RestrictedRoute';
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={''}>
+        <Route
+          path="/register"
+          //element={<RestrictedRoute redirectTo="/contacts" component={''} />}
+        ></Route>
+      </Route>
+      <ContactForm>
+        <ContactList />
+      </ContactForm>
+    </Routes>
   );
 };
+
+export default App;
