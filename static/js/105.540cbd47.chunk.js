@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[105],{5105:function(e,t,a){a.r(t),a.d(t,{default:function(){return s}});var n="HomePages_container__gnZgR",o="HomePages_title__DSOjQ",r=a(184);function s(){return(0,r.jsx)("div",{className:n,children:(0,r.jsx)("h1",{className:o,children:"Welcome to the phonebook page. Please select Register or Login."})})}}}]);
+//# sourceMappingURL=105.540cbd47.chunk.js.map
