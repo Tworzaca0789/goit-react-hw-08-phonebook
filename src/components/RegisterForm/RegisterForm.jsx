@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operationsAuth';
+import styles from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -30,10 +31,14 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
-      <h1>Page of registration</h1>
+    <div className={styles.appRegistration}>
+      <h1>Atmospheric registration</h1>
 
-      <form onSubmit={handleSubmit} autoComplete="on">
+      <form
+        className={styles.appForm}
+        onSubmit={handleSubmit}
+        autoComplete="on"
+      >
         <label>
           Name
           <input type="text" name="name" value={name} onChange={handleChange} />

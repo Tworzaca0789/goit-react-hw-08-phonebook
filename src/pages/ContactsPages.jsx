@@ -2,13 +2,13 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../redux/contacts/operations';
-import { selectIsLoading } from '../redux/contacts/selectors';
 import ContactForm from 'components/ContactForm/ContactForm';
 import { SearchFilter } from 'components/SearchFilter/SearchFilter';
+import { selectIsLoggedIn } from '../redux/auth/selectorsAuth';
 
 export const ContactsPages = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   useEffect(() => {
     dispatch(getContacts());
@@ -17,10 +17,15 @@ export const ContactsPages = () => {
   return (
     <>
       <h2>Your contacts</h2>
-      <div>{isLoading && 'Request in progress ...'}</div>
-      <ContactForm />
-      <SearchFilter />
-      <ContactList />
+      {isLoggedIn ? (
+        <>
+          <ContactForm />
+          <SearchFilter />
+          <ContactList />
+        </>
+      ) : (
+        <p>No contacts.Please sing up or sing in!</p>
+      )}
     </>
   );
 };

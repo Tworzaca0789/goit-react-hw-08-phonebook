@@ -1,0 +1,14 @@
+.boxBar {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgreen;
+  height: 100px;
+  align-items: center;
+}
+
+.appBnav {
+  display: flex;
+  font-size: 30px;
+  gap: 22px;
+  font-weight: bold;
+}

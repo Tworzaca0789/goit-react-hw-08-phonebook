@@ -8,6 +8,7 @@ export const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const isLoggedIn = useSelector(selectIsLoggedIn);
+
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'email':
@@ -31,7 +32,7 @@ export const LoginForm = () => {
       {!isLoggedIn ? (
         <>
           {' '}
-          <h1>Page of Loggin</h1>
+          <h1>Atmospheric login</h1>
           <form onSubmit={handleSubmit} autoComplete="on">
             <label>
               Email

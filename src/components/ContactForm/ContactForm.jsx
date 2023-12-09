@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import styles from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,11 +16,11 @@ export default function ContactForm() {
   const telId = nanoid();
 
   const handleChangeName = evt => {
-    setName(evt.target.value);
+    setName(evt.currentTarget.value);
   };
 
   const handleChangeNumner = evt => {
-    setNumber(evt.target.value);
+    setNumber(evt.currentTarget.value);
   };
 
   const reset = () => {
@@ -31,7 +31,7 @@ export default function ContactForm() {
   const handleSubmit = evt => {
     evt.preventDefault();
 
-    contacts.find(contact => contact.name === name)
+    contacts.some(contact => contact.name === name)
       ? alert(`${name} is already in contacts`)
       : dispatch(
           addContacts({

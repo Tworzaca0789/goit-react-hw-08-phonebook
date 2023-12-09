@@ -14,19 +14,28 @@ export const ContactList = () => {
   );
 
   return (
-    <ul className={styles.contactList}>
-      {filteredContacts.map(({ id, name, number }) => (
-        <li key={id} className={styles.contactItem}>
-          <ContactListItem id={id} name={name} number={number} />
-          <button
-            type="button"
-            className={styles.contactDeleteBtn}
-            onClick={() => dispatch(deleteContacts(id))}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>
+    <>
+      {contacts.length > 0 ? (
+        <ul className={styles.contactList}>
+          {filteredContacts.map(({ id, name, number }) => (
+            <li key={id} className={styles.contactItem}>
+              <ContactListItem id={id} name={name} number={number} />
+              <button
+                type="button"
+                className={styles.contactDeleteBtn}
+                onClick={() => dispatch(deleteContacts(id))}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <h2>
+          {''}
+          Add contacts <br /> Your phonebook is empty{''}
+        </h2>
+      )}
+    </>
   );
 };
