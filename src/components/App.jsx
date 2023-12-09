@@ -33,7 +33,7 @@ const App = () => {
             path="/register"
             element={
               <RestrictedRoute
-                redirectTo="/contacts"
+                redirectTo="/login"
                 component={<RegisterPage />}
               />
             }
@@ -53,6 +53,7 @@ const App = () => {
               <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
             }
           />
+          <Route path="*" component={<HomePage />} />
         </Routes>
       </div>
     ))

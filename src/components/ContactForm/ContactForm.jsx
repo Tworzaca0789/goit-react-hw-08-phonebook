@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import styles from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../../redux/contacts/selectors';
+import { selectContacts } from '../../redux/contacts/selectors';
 import { addContacts } from '../../redux/contacts/operations';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
