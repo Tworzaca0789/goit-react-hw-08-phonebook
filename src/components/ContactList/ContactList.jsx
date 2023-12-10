@@ -19,7 +19,7 @@ export const ContactList = () => {
         <ul className={styles.contactList}>
           {filteredContacts.map(({ id, name, number }) => (
             <li key={id} className={styles.contactItem}>
-              <ContactListItem id={id} name={name} number={number} />
+              <ContactListItem key={id} id={id} name={name} number={number} />
               <button
                 type="button"
                 className={styles.contactDeleteBtn}
