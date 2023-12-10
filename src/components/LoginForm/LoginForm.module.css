@@ -1,0 +1,67 @@
+.loginBox {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgreen;
+}
+
+.appTitleLogin {
+  display: flex;
+  justify-content: center;
+  color: darkgreen;
+  margin-top: 50px;
+}
+
+.appFormLogin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  border: 10px green solid;
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 100px;
+}
+.labelLogin {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.inputLogin {
+  outline: none;
+  border: 2px solid darkgreen;
+  border-radius: 50px;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: darkgreen;
+  font-weight: bold;
+  background-color: chartreuse;
+  border-radius: 50px;
+  border: 2px darkgreen solid;
+}
+.buttonLogin:hover {
+  background-color: chocolate;
+}
+
+.titleWelcome {
+  display: flex;
+  justify-content: center;
+  color: darkgreen;
+  margin-top: 50px;
+  font-size: 22px;
+}

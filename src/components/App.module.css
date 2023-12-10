@@ -1,0 +1,7 @@
+.appAppBox {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  justify-content: center;
+  text-align: center;
+}

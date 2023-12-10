@@ -1,0 +1,6 @@
+.containerNav {
+  display: flex;
+  font-size: 28px;
+  gap: 22px;
+  font-weight: bolder;
+}

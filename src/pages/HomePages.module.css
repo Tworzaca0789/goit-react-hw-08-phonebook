@@ -2,9 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background-color: lightgreen;
+  margin: 50px;
 }
 .title {
   font-weight: bold;
   font-size: 46px;
   text-align: center;
+  color: darkgreen;
+}
+
+.appHomeContent {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+.colorLight {
+  color: cadetblue;
 }

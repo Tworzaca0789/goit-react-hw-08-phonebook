@@ -11,6 +11,7 @@ import { ContactsPages } from '../pages/ContactsPages';
 import Login from 'pages/LoginPages';
 import Register from 'pages/RegisterPages';
 import Home from 'pages/HomePages';
+import styles from './App.module.css';
 
 // const HomePage = lazy(() => import('../pages/HomePages'));
 // const RegisterPage = lazy(() => import('../pages/RegisterPages'));
@@ -31,7 +32,7 @@ const App = () => {
     (isRefreshing ? (
       <b>Refreshing user...</b>
     ) : (
-      <div>
+      <div className={styles.appAppBox}>
         <AppBar />
         <Routes>
           <Route index element={<Home />} />

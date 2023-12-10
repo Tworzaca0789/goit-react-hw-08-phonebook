@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operationsAuth';
 import styles from './RegisterForm.module.css';
+import { BiLock } from 'react-icons/bi';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -31,22 +32,32 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div className={styles.appRegistration}>
-      <h1>Atmospheric registration</h1>
+    <div className={styles.registrationBox}>
+      <h1 className={styles.appTitleRegistr}>
+        <BiLock />
+        Atmospheric registration
+      </h1>
 
       <form
-        className={styles.appForm}
+        className={styles.appFormRegistr}
         onSubmit={handleSubmit}
         autoComplete="on"
       >
-        <label>
+        <label className={styles.labelRegistr}>
           Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            className={styles.inputRegistr}
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label>
+        <label className={styles.labelRegistr}>
           Email
           <input
+            className={styles.inputRegistr}
             type="email"
             name="email"
             value={email}
@@ -54,9 +65,10 @@ export const RegisterForm = () => {
           />
         </label>
 
-        <label>
+        <label className={styles.labelRegistr}>
           Password
           <input
+            className={styles.inputRegistr}
             type="password"
             name="password"
             value={password}
@@ -64,7 +76,9 @@ export const RegisterForm = () => {
           />
         </label>
 
-        <button type="submit">Register</button>
+        <button className={styles.buttonRegistr} type="submit">
+          Register
+        </button>
       </form>
     </div>
   );

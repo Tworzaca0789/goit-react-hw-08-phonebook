@@ -1,0 +1,19 @@
+.appNav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navHome {
+  display: flex;
+  margin-left: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.appBook {
+  display: flex;
+  margin-left: 5px;
+  flex-direction: row;
+  align-items: center;
+}

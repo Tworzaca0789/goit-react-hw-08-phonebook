@@ -1,0 +1,28 @@
+.userName {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+.userButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: darkgreen;
+  font-weight: bold;
+  background-color: chartreuse;
+  border-radius: 50px;
+  border: 2px darkgreen solid;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightgreen;
+  margin: 50px;
+}
