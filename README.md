@@ -1,39 +1,43 @@
-# My name is the React project "Phonebook"
+# My name is the React project "Phone Book"
 
-The project allows you to add and remove your contact list.
-
-The aim of the project was to create an application that allows you to easily
-add a new contact to the phone book, as well as remove a given contact from it.
+The project enables user registration, login and updates, as well as work with a
+private set of contacts. It allows you to add and remove contacts.
 
 This app consolidates material from your online course. This project was created
-with [Create React App](https://github.com/facebook/create-react-app)
+using [Create React App](https://github.com/facebook/create-react-app)
 
-A code refactor of the "Phonebook" application was carried out, adding state
-management using the Redux Toolkit library.
+Refactored the code of the "Phone Book" application by adding the management
+state using the Redux Toolkit library.
 
-This project is a continuation of task 6 "Phonebook", which used hooks and
-Redux/Redux Toolkit technologies.
+This project is a continuation of task 7 "The telephone book", which used hooks
+and Redux Technologies/Redux Toolkit.
 
 ## What was created in the application
 
-- The store has been created with configureStore().
-- An action for saving and deleting a contact and refreshing a filter has been
-  created.
-- Contact and filter reducers have been created. The createSlice() function was
-  used.
-- React components and Redux logic have been linked using react-redux library
+- The store was created using configurationStore().
+- An action was taken to save and delete the contact and refresh the filter.
+- Contact and filter reducers were created. The createSlice() function was used.
+- React components and Redux logic were combined using the React-Redux library
   hooks.
-- The application saves contacts using the backend.
-- The backend for the project was created using the mockapi.io UI website.
-- The createAsyncThunk function was used to work with the backend and
-  asynchronous queries.
+- The app saves contacts using the backend.
+- The backend of the project was created using a ready-made back-end.
+- The createAsyncThunk function was used to work with the backend asynchronous
+  queries.
 
-![Alt text](image.phonebook7.png)
+##Added routing with React Router library:
+
+/register - public route for registering a new user with the form /login -
+public login route for an existing user with the form /contacts - private route
+for working with the user's contact list
+
+![Alt text](image.phonebook8.png) ![Alt text](image.phonebook9.png)
+![Alt text](image.phonebook10.png) ![Alt text](image.phonebook11.png)
+![Alt text](image.phonebook12.png)
 
 ## Technologies
 
 - "JavaScript"
-- "react": "^18.1.0",
+- "react": "^18.2.0",
 - "nanoid": "^5.0.4",
 - "node": "v18.16.1",
 - "react-dom": "^18.1.0",
@@ -51,5 +55,5 @@ Redux/Redux Toolkit technologies.
 
 - git clone - clone the remote repository locally to your computer;
 - npm install - create dependencies;
-- npm start - run the application, access to it will be possible at
+- npm start - run the application, access to it will be possible at:
   localhost:3000;
